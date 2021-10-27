@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtpVerificationActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP"
+        android:layout_marginBottom="10dp"></TextView>
+    <EditText
+        android:id="@+id/edit_OTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter OTP"></EditText>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center">-->
+<!--        <EditText-->
+<!--            android:id="@+id/otp_digit01"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:maxLength="1"></EditText>-->
+<!--        <EditText-->
+<!--            android:id="@+id/otp_digit02"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:maxLength="1"></EditText>-->
+<!--        <EditText-->
+<!--            android:id="@+id/otp_digit03"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:maxLength="1"></EditText>-->
+<!--        <EditText-->
+<!--            android:id="@+id/otp_digit04"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:maxLength="1"></EditText>-->
+<!--        <EditText-->
+<!--            android:id="@+id/otp_digit05"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:maxLength="1"></EditText>-->
+<!--        <EditText-->
+<!--            android:id="@+id/otp_digit06"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:maxLength="1"></EditText>-->
+<!--    </LinearLayout>-->
+
+    <Button
+        android:id="@+id/btn_verifyOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify"></Button>
+
+
+</LinearLayout>

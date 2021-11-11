@@ -126,7 +126,7 @@ public class MyProfileActivity extends AppCompatActivity {
     }
 
     private void uploadToFirebase() {
-        storageReference = storage.getReference().child("images/"+ UUID.randomUUID().toString());
+        storageReference = storage.getReference().child("profilePhotos/"+ utils.getToken()/*UUID.randomUUID().toString()*/);
 
         storageReference.putFile(filePath)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -157,41 +157,10 @@ public class MyProfileActivity extends AppCompatActivity {
         });
 
     }
-    //    private void uploadProfilePicture() {
-//        Intent intent = new Intent();
-//        intent.setType("image/*");
-//        intent.setAction(Intent.ACTION_GET_CONTENT);
-//        startActivityForResult(
-//                Intent.createChooser(
-//                        intent,
-//                        "Select Image from here..."),
-//                PICK_IMAGE_REQUEST);
-//        if (filePath!=null){
-//            ProgressDialog progressDialog = new ProgressDialog(this);
-//            progressDialog.setTitle("Uploading....");
-//            progressDialog.show();
-//
-//            StorageReference ref = storageReference.child("images/"+ UUID.randomUUID().toString());
-//            ref.putFile(filePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                    progressDialog.dismiss();
-//                    Toast.makeText(MyProfileActivity.this, "Image Uploaded", Toast.LENGTH_SHORT).show();
-//                }
-//            }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-//                    double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
-//                    progressDialog.setMessage("Uploaded"+(int)progress+"%");
-//
-//                }
-//            });
-//        }
-//
-//    }
+
 
     private void fetchProfile() {
-        utils.putToken("user001");
+        utils.putToken("Lh1u3z15LbnChhX5c2eX");
 
         db.collection("users").document(utils.getToken()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override

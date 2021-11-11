@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
-    private Button btn_createHaali,btn_myProfile,btn_cropsInformation,btn_weather,btn_calculator,btn_logout;
+    private Button btn_createHaali,btn_myProfile,btn_cropsInformation,btn_weather,btn_calculator,btn_logout,btn_chatWithExpert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btn_myProfile = findViewById(R.id.btn_myProfile);
         btn_createHaali = findViewById(R.id.btn_createHaali);
         btn_logout = findViewById(R.id.btn_logout);
+        btn_chatWithExpert = findViewById(R.id.btn_chatWithExpert);
 
         btn_createHaali.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,8 +68,15 @@ public class MainActivity extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(MainActivity.this,InputMobileActivity.class);
                 startActivity(intent);
+            }
+        });
+        btn_chatWithExpert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                to be written
             }
         });
     }

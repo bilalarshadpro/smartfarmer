@@ -7,7 +7,6 @@ public class Utils {
     public SharedPreferences sharedPreferences;
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Token = "Token";
-    public String username,password;
 
     public Utils(Context context) {
         sharedPreferences = context.getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);

@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateHaaliActivity">
+    tools:context=".CreateHaaliActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/edit_haaliName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name of Haali"
+        ></EditText>
+    <EditText
+        android:id="@+id/edit_haaliPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Phone of Haali"
+        ></EditText>
+    <EditText
+        android:id="@+id/edit_haaliAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Complete Address of Haali"
+        ></EditText>
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner_rateType"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:scrollbars="vertical"-->
+<!--        android:padding="10dp"-->
+<!--        android:spinnerMode="dialog"-->
+<!--        />-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <EditText-->
+<!--        android:id="@+id/edit_costPerHour"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Per hour rate"></EditText>-->
+<!--    <EditText-->
+<!--        android:id="@+id/edit_costPerDay"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Per day rate"></EditText>-->
+    <EditText
+        android:id="@+id/edit_allocatedArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Allocated Area"></EditText>
+    <Button
+        android:id="@+id/btn_createHaali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"></Button>
+
+
+</LinearLayout>

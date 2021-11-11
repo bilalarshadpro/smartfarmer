@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:background="@drawable/background_single_notification"
+    android:gravity="center">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_baseline_person_24"
+        android:padding="2dp"
+        android:layout_marginStart="3dp">
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/txt_notificationHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="Heading"
+            android:textStyle="bold"
+            ></TextView>
+        <TextView
+            android:id="@+id/txt_notificationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="This is Notification Description This is Notification Description This is Notification Description This is Notification Description "
+            ></TextView>
+        <TextView
+            android:id="@+id/txt_notificationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="10-10-2021"
+            ></TextView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -17,23 +17,23 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         utils = new Utils(this);
-//        delay();
+        delay();
     }
 
-//    private void delay() {
-//        final Handler handler = new Handler(Looper.getMainLooper());
-//        handler.postDelayed(new Runnable() {
-//            @Overide
-//            public void run() {
-//                if (utils.isLoggedIn()) {
-//                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-//                    startActivity(intent);
-//                } else {
-//                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
-//                    startActivity(intent);
-//                }
-//                finish();
-//            }
-//        }, 3000);
-//    }
+    private void delay() {
+        final Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (utils.isLoggedIn()) {
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
+                finish();
+            }
+        }, 3000);
+    }
 }

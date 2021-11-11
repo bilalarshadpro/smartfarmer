@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Smart Farmer</string>
+    <string-array name="str_rateType">
+
+        <item>Select Rate</item>
+        <item>Per Hour</item>
+        <item>Per Day</item>
+
+    </string-array>
 </resources>

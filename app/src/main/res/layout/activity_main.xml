@@ -30,7 +30,7 @@
         android:id="@+id/btn_cropsInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Crops Detail"></Button>
+        android:text="Crops"></Button>
     <Button
         android:id="@+id/btn_calculator"
         android:layout_width="wrap_content"
@@ -41,6 +41,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Profile"></Button>
+    <Button
+        android:id="@+id/btn_chatWithExpert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat with Expert"></Button>
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="wrap_content"

@@ -10,13 +10,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SignUp"></TextView>
-    <EditText
-        android:id="@+id/editText_mobileNo"
+        android:text="Enter Mobile No"></TextView>
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="+92"
-        android:maxLength="10"></EditText>
+        android:layout_height="wrap_content">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editText_mobileNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="3001234567"
+            android:maxLength="10"></EditText>
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_sendOTP"
         android:layout_width="wrap_content"

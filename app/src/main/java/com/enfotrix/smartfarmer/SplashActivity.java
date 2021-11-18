@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.enfotrix.smartfarmer.classes.Utils;
+import com.lusfold.spinnerloading.SpinnerLoading;
 
 public class SplashActivity extends AppCompatActivity {
     private Utils utils;
@@ -17,6 +18,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         utils = new Utils(this);
+        SpinnerLoading spinner_loading = findViewById(R.id.spinner_loading);
+        spinner_loading.setPaintMode(1);
+        spinner_loading.setCircleRadius(30);
+        spinner_loading.setItemCount(8);
         delay();
     }
 

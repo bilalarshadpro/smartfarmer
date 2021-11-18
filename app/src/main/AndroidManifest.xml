@@ -32,7 +32,9 @@
         </activity>
         <activity
             android:name=".OtpVerificationActivity"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".HaaliActivity"
             android:exported="false" />
@@ -52,7 +54,9 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="false" />

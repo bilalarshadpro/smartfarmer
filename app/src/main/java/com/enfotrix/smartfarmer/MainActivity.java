@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn_createHaali,btn_myProfile,btn_cropsInformation,btn_weather,btn_calculator,btn_logout,btn_chatWithExpert;
+    private TextView txt_weather;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btn_createHaali = findViewById(R.id.btn_createHaali);
         btn_logout = findViewById(R.id.btn_logout);
         btn_chatWithExpert = findViewById(R.id.btn_chatWithExpert);
+        txt_weather = findViewById(R.id.txt_weather);
 
         btn_createHaali.setOnClickListener(new View.OnClickListener() {
             @Override

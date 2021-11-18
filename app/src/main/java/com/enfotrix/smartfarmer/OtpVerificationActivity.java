@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.enfotrix.smartfarmer.classes.Utils;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
@@ -19,8 +21,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class OtpVerificationActivity extends AppCompatActivity {
@@ -32,6 +39,8 @@ public class OtpVerificationActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
     private Utils utils;
+    private int counter_userPhoneNo=0;
+    boolean isUniqueUser ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,43 +115,17 @@ public class OtpVerificationActivity extends AppCompatActivity {
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
 
-//    private void initiateOTP() {
-//        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-//                str_mobileMobile,
-//                60,
-//                TimeUnit.SECONDS,
-//                this,
-//                new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-//                    @Override
-//                    public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-//                        otpId = s;
-//                    }
-//
-//                    @Override
-//                    public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-//                        signInWithPhoneAuthCredential(phoneAuthCredential);
-//
-//                    }
-//
-//                    @Override
-//                    public void onVerificationFailed(@NonNull FirebaseException e) {
-//                        Toast.makeText(OtpVerificationActivity.this, "Verification failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
-//
-//                    }
-//                }
-//        );
-//    }
-
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            registerNewUser();
-//                            Toast.makeText(OtpVerificationActivity.this, "OTP is: "+credential, Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(OtpVerificationActivity.this,MainActivity.class));
-                            finish();
+                            if (checkUserExistence()) {
+                                // Toast.makeText(OtpVerificationActivity.this, "OTP is: "+credential, Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(OtpVerificationActivity.this, MainActivity.class));
+                                finish();
+                            }
 
                         } else {
                             Toast.makeText(OtpVerificationActivity.this, "OTP verification failed", Toast.LENGTH_SHORT).show();
@@ -151,7 +134,52 @@ public class OtpVerificationActivity extends AppCompatActivity {
                 });
     }
 
-    private void registerNewUser() {
+    private boolean checkUserExistence() {
+        db.collectionGroup("users").get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull  Task<QuerySnapshot> task) {
+
+                        for(QueryDocumentSnapshot document : task.getResult()){
+
+                            if(document.getString("user_phoneNo").equals(str_mobileNo)){
+                                counter_userPhoneNo++;
+                                utils.putToken(document.getString("user_phoneNo"));
+//                                Toast.makeText(ActivitySignup.this, ""+document.getString("username"), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        if(counter_userPhoneNo>0) Toast.makeText(OtpVerificationActivity.this, "User Already Exists!", Toast.LENGTH_SHORT).show();
+                        else createNewUser();
+                        counter_userPhoneNo=0;
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull  Exception e) {
+                        Toast.makeText(OtpVerificationActivity.this, "Connection Error", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        return  isUniqueUser;
+    }
+
+    private void createNewUser() {
+        Map<String, Object> data = new HashMap<>();
+        data.put("user_phoneNo",str_mobileNo);
+
+        db.collection("users").add(data).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+               utils.putToken(str_mobileNo);
+                Toast.makeText(OtpVerificationActivity.this, "User Created Successfully", Toast.LENGTH_SHORT).show();
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(OtpVerificationActivity.this, "Failed to Register New User", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

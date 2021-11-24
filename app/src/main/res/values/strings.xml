@@ -1,10 +1,18 @@
 <resources>
     <string name="app_name">Smart Farmer</string>
+    <string name="_Choose_Your_Language">Choose Your Language</string>
+    <string name="_English">English</string>
+    <string name="_Urdu">Urdu</string>
+    <string name="_Continue">Continue</string>
+
+
+
     <string-array name="str_rateType">
 
         <item>Select Rate</item>
         <item>Per Hour</item>
         <item>Per Day</item>
+
 
     </string-array>
 </resources>

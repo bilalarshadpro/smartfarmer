@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "729511667900",
+    "project_id": "smart-farmer-ca36c",
+    "storage_bucket": "smart-farmer-ca36c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729511667900:android:832f94c348df46c1efc8b9",
+        "android_client_info": {
+          "package_name": "com.enfotrix.smartfarmer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729511667900-1451uif1sofrm8krdoi5gkbv12ff44fi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enfotrix.smartfarmer",
+            "certificate_hash": "1a434947ab046ad5a12e2bf2fa521c57f326e22e"
+          }
+        },
+        {
+          "client_id": "729511667900-bm3ksq69mqm6dpgr2qiscl5t99lb8kt8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGzOafF_Q7xpvEkEsj-Z-Bu_Zns8OYIk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729511667900-bm3ksq69mqm6dpgr2qiscl5t99lb8kt8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

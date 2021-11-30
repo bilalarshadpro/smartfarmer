@@ -4,8 +4,7 @@
     <string name="_English">English</string>
     <string name="_Urdu">Urdu</string>
     <string name="_Continue">Continue</string>
-
-
+    <string name="_Welcome_to_Smart_Farmer">Welcome to smart farmer</string>
 
     <string-array name="str_rateType">
 

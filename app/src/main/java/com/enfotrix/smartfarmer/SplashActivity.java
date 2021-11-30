@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         utils = new Utils(this);
         SpinnerLoading spinner_loading = findViewById(R.id.spinner_loading);
         spinner_loading.setPaintMode(1);
-        spinner_loading.setCircleRadius(30);
+        spinner_loading.setCircleRadius(10);
         spinner_loading.setItemCount(8);
         delay();
     }
@@ -39,6 +39,6 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 finish();
             }
-        }, 3000);
+        }, 4000);
     }
 }

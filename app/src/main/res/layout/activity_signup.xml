@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="13"
-    tools:context=".SignupActivity"
+    tools:context=".Activity_Choose_Language"
     android:gravity="center">
 
     <TextView
@@ -102,7 +102,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/_Continue"
         android:textStyle="bold"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:background="@drawable/button_lang_continue"
         >
     </Button>

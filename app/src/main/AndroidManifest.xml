@@ -35,7 +35,7 @@
             android:name=".HaaliActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity_Choose_Language"
+            android:name=".ChooseLanguageActivity"
             android:exported="true" >
 
             <intent-filter>

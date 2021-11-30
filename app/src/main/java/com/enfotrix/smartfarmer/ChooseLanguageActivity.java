@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Activity_Choose_Language extends AppCompatActivity {
+public class ChooseLanguageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Activity_Choose_Language);
+        setContentView(R.layout.activity_choose_language);
 
     }
 }

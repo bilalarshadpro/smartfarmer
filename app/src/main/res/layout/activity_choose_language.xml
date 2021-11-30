@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="13"
-    tools:context=".Activity_Choose_Language"
+    tools:context=".ChooseLanguageActivity"
     android:gravity="center">
 
     <TextView

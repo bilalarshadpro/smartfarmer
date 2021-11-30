@@ -9,7 +9,7 @@ public class Activity_Choose_Language extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.Activity_Choose_Language);
 
     }
 }

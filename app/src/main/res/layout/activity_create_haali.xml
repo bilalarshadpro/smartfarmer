@@ -7,24 +7,74 @@
     tools:context=".CreateHaaliActivity"
     android:gravity="center"
     android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:text="@string/create_haali"
+        android:textColor="@color/main_color_green"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/edit_haaliName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name of Haali"
-        ></EditText>
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="@string/name_of_haali"
+
+        />
     <EditText
         android:id="@+id/edit_haaliPhone"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Phone of Haali"
-        ></EditText>
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="@string/phone_of_haali"
+
+        />
     <EditText
         android:id="@+id/edit_haaliAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Complete Address of Haali"
-        ></EditText>
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="@string/address_of_haali"
+
+        />
+    <EditText
+        android:id="@+id/edit_allocatedArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="@string/allocated_area"
+
+        />
+
+    <Button
+        android:id="@+id/btn_createHaali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background"
+        android:text="@string/create"
+        android:textColor="@color/black" />
+
+
+
+
+
+
+
 <!--    <Spinner-->
 <!--        android:id="@+id/spinner_rateType"-->
 <!--        android:layout_width="wrap_content"-->
@@ -44,16 +94,8 @@
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:hint="Per day rate"></EditText>-->
-    <EditText
-        android:id="@+id/edit_allocatedArea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Allocated Area"></EditText>
-    <Button
-        android:id="@+id/btn_createHaali"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create"></Button>
+
+
 
 
 </LinearLayout>

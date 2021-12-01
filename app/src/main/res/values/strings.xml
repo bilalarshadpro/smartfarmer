@@ -4,7 +4,16 @@
     <string name="_English">English</string>
     <string name="_Urdu">Urdu</string>
     <string name="_Continue">Continue</string>
-
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="skip">Skip</string>
+    <string name="create_haali">Create Haali</string>
+    <string name="name_of_haali">Name of Haali</string>
+    <string name="phone_of_haali">Phone of Haali</string>
+    <string name="address_of_haali">Address of Haali</string>
+    <string name="allocated_area">Allocated Area</string>
+    <string name="create">Create</string>
+    <string name="verify">Verify</string>
 
 
     <string-array name="str_rateType">

@@ -7,31 +7,79 @@
     tools:context=".InputMobileActivity"
     android:orientation="vertical"
     android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter Mobile No"></TextView>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/ccp"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:text="Enter Mobile Number"
+        android:textColor="@color/main_color_green"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/icon_pakistan"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_flag_24"
+
+
+            />
+
+        <TextView
+            android:id="@+id/textview_pk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/icon_pakistan"
+            android:text="PK"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            />
 
         <EditText
             android:id="@+id/editText_mobileNo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="3001234567"
-            android:maxLength="10"></EditText>
+            android:layout_toRightOf="@id/textview_pk"
+            android:background="@drawable/edit_text_shape"
+            android:hint="03055477489"
+            android:maxLength="11"
+
+            >
+
+        </EditText>
+
+
+
+
+
+
+
+
+
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_sendOTP"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send OTP"></Button>
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background"
+        android:text="SEND OTP"
+        android:textColor="@color/black" />
+
+
 
 </LinearLayout>

@@ -7,16 +7,41 @@
     tools:context=".OtpVerificationActivity"
     android:orientation="vertical"
     android:gravity="center">
+
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
         android:text="Verify OTP"
-        android:layout_marginBottom="10dp"></TextView>
+        android:textColor="@color/main_color_green"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/edit_OTP"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter OTP"></EditText>
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="Enter OTP"
+
+        />
+
+    <Button
+        android:id="@+id/btn_verifyOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background"
+        android:text="@string/verify"
+        android:textColor="@color/black" />
+
+
+
+
 <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
@@ -53,11 +78,7 @@
 <!--            android:maxLength="1"></EditText>-->
 <!--    </LinearLayout>-->
 
-    <Button
-        android:id="@+id/btn_verifyOTP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Verify"></Button>
+
 
 
 </LinearLayout>

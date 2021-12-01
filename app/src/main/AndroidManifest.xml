@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.enfotrix.smartfarmer" >
+    package="com.enfotrix.smartfarmer">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,44 +12,39 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SmartFarmer" >
+        android:theme="@style/Theme.SmartFarmer">
         <activity
-            android:name=".NotificationsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CreateHaaliActivity"
+            android:name=".SignupActivity"
             android:exported="true" >
-
-        </activity>
-        <activity
-            android:name=".InputMobileActivity"
-            android:exported="true" >
-
-        </activity>
-        <activity
-            android:name=".OtpVerificationActivity"
-            android:exported="true" >
-
-        </activity>
-        <activity
-            android:name=".HaaliActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChooseLanguageActivity"
-            android:exported="true" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateHaaliActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".InputMobileActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".OtpVerificationActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".HaaliActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseLanguageActivity"
+            android:exported="true">
 
         </activity>
         <activity
             android:name=".MyProfileActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".CalculatorActivity"
             android:exported="false" />
@@ -58,16 +53,13 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

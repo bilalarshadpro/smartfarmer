@@ -14,6 +14,18 @@
     <string name="allocated_area">Allocated Area</string>
     <string name="create">Create</string>
     <string name="verify">Verify</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="news">News</string>
+    <string name="weather">Weather</string>
+    <string name="crops">Crops</string>
+    <string name="fertilizers">Fertilizers</string>
+    <string name="seeds">Seeds</string>
+    <string name="diseases">Diseases</string>
+    <string name="chat_with_expert">Chat with expert</string>
+    <string name="calculator">Calculator</string>
+    <string name="my_profile">My profile</string>
+    <string name="logout">Logout</string>
+    <string name="welcome">Welcome</string>
 
 
     <string-array name="str_rateType">

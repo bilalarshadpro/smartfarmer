@@ -18,10 +18,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         utils = new Utils(this);
-        SpinnerLoading spinner_loading = findViewById(R.id.spinner_loading);
-        spinner_loading.setPaintMode(1);
-        spinner_loading.setCircleRadius(10);
-        spinner_loading.setItemCount(8);
+//        SpinnerLoading spinner_loading = findViewById(R.id.spinner_loading);
+//        spinner_loading.setPaintMode(1);
+//        spinner_loading.setCircleRadius(10);
+//        spinner_loading.setItemCount(8);
         delay();
     }
 

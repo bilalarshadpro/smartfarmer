@@ -14,37 +14,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartFarmer">
         <activity
+            android:name=".CropsInformationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FertilizersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DiseasesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SeedsActivity"
+            android:exported="true" />
+        <activity
             android:name=".SignupActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".NotificationsActivity"
             android:exported="false" />
         <activity
             android:name=".CreateHaaliActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".InputMobileActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".OtpVerificationActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".HaaliActivity"
             android:exported="false" />
         <activity
             android:name=".ChooseLanguageActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MyProfileActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CalculatorActivity"
             android:exported="false" />
@@ -53,13 +59,19 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true"></activity>
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
